@@ -1,7 +1,8 @@
 # SToM
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
-SToM is project developed for educational purposes.
+
+SToM is a project developed for educational purposes.
 
 ## Development server
 
