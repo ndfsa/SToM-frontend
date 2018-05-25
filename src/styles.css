@@ -7,27 +7,14 @@
 
 body {
   font-family: 'open sans', helvetica, arial, sans;
-
-}
-
-body::before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url(https://www.myplaystationwallpapers.net/1920x1080/nier-automata-concept-art.jpg) no-repeat center center fixed;
+  background:url(https://www.myplaystationwallpapers.net/1920x1080/nier-automata-concept-art.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  content: '';
-  /*background-position: center center;*/
-  /*background-repeat: no-repeat;*/
-  /*background-attachment: fixed;*/
-  background-size: cover;
-
-  filter: blur(5px);
-
 }
+
+
 
 .btn {
   display: inline-block;
@@ -137,6 +124,7 @@ body::before {
   letter-spacing: 1px;
   text-align: center;
 }
+
 input {
   width: 100%;
   margin-bottom: 10px;
@@ -158,4 +146,19 @@ input {
 }
 input:focus {
   box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4), 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+.container{
+  border: 1px;
+}
+.title{
+  font-size: xx-large;
+  color: darkred;
+}
+.container2{
+  border: 1px;
+  position: center;
+}
+.menuitem{
+  font-size: x-large;
+  color: #e6e6e6;
 }
