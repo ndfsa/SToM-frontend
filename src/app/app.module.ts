@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {BaseRequestOptions, HttpModule, RequestOptions, Headers} from '@angular/http';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { ClienteService } from './services/cliente.service';
-import { ClienteComponent } from './cliente.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
@@ -14,7 +12,7 @@ import { UserpageComponent } from './userpage/userpage.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ClienteComponent,
+
     SignupComponent,
     SigninComponent,
     HomeComponent,

@@ -1,2 +1,7 @@
 
-<login-form></login-form>
+<div class="login">
+  <h1>SToM :)</h1>
+  <input type="text" [(ngModel)]="email" name="u" placeholder="E-mail" required="required"/>
+  <input type="password" [(ngModel)]="password" name="u" placeholder="Password" required="required"/>
+  <input type="button" value="Login!" class="btn btn-primary btn-block btn-large" (click)="log($event)"/>
+</div>

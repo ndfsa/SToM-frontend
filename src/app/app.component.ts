@@ -13,14 +13,14 @@ export class AppComponent {
   estados: any = [];
   constructor(private serviciod: ClienteService) {
   }
-  log(event){
-    event.preventDefault();
-    var cliente = {
-      correo: this.email,
-      password: this.password,
-    }
-    this.serviciod.logCliente(cliente).then(estado => { this.estados.push(estado) });
-  }
+  // log(event){
+  //   event.preventDefault();
+  //   var cliente = {
+  //     correo: this.email,
+  //     password: this.password,
+  //   }
+  //   this.serviciod.logCliente(cliente);
+  // }
 
 
 
