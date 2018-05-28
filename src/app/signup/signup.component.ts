@@ -5,7 +5,7 @@ import {ClienteService} from '../services/cliente.service';
   selector: 'signup-form',
   template: `
     <div class="login">
-      <h1></h1>
+      <h1>Welcome!</h1>
       <input type="text" [(ngModel)]="name" name="u" placeholder="Name" required="required"/>
       <input type="text" [(ngModel)]="email" name="u" placeholder="E-mail" required="required"/>
       <input type="password" [(ngModel)]="password" name="u" placeholder="Password" required="required"/>
@@ -29,11 +29,7 @@ export class SignupComponent implements OnInit {
       correo: this.email,
       password: this.password
     }
-    if(this.password.length < 8){
-      console.log("la contasena debe ser de 8 o mas caracteres");
-    }else{
-      this.serviciod.registerCliente(cliente).then(estado => { this.estados.push(estado) });
-    }
+    this.serviciod.registerCliente(cliente).then(estado => { this.estados.push(estado) });
   }
 
 }
