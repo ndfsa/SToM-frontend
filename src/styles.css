@@ -20,11 +20,11 @@ body::before{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
   transform: scale(1.055);
 }
 
@@ -162,11 +162,13 @@ input:focus {
 .container{
   border: 1px;
   position: absolute;
-  margin: 200px;
+  margin: 300px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  background: rgba(200,200,200,0.3);
+  border-radius: 10px;
 }
 .toolbar{
   position: absolute;
@@ -196,6 +198,8 @@ input:focus {
   background-color: #111;
 }
 .title{
+  margin-left: 30px;
+  margin-top: 30px;
   font-size: xx-large;
   color: darkred;
 }
