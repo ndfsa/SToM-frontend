@@ -2,16 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {ClienteService} from '../services/cliente.service';
 
 @Component({
-  selector: 'signup-form',
-  template: `
-    <div class="login">
-      <h1>Welcome!</h1>
-      <input type="text" [(ngModel)]="name" name="u" placeholder="Name" required="required"/>
-      <input type="text" [(ngModel)]="email" name="u" placeholder="E-mail" required="required"/>
-      <input type="password" [(ngModel)]="password" name="u" placeholder="Password" required="required"/>
-      <input type="button" value="Register!" class="btn btn-primary btn-block btn-large" (click)="register($event)"/>
-    </div>
-  `
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
   name: any;
