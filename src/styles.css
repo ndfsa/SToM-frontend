@@ -162,7 +162,7 @@ input:focus {
 .container{
   border: 1px;
   position: absolute;
-  margin: 300px;
+  margin: 10% 10% 10% 10%;
   top: 0;
   bottom: 0;
   left: 0;
