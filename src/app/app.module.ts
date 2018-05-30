@@ -10,13 +10,15 @@ import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { UserpageComponent } from './userpage/userpage.component';
 import {Globals} from "./globals";
+import { ModifyComponent } from './modify/modify.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     SigninComponent,
     HomeComponent,
-    UserpageComponent
+    UserpageComponent,
+    ModifyComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import {Globals} from "./globals";
       { path: 'signup', component : SignupComponent },
       { path: 'home', component: HomeComponent },
       { path: 'userpage', component: UserpageComponent },
+      { path: 'userpage/modify', component: ModifyComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/home', pathMatch: 'full' }
     ])

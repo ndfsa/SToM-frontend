@@ -1,0 +1,23 @@
+.background{
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background:url(https://www.myplaystationwallpapers.net/1920x1080/nier-automata-concept-art.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(4px);
+  transform: scale(1.055);
+}
+.artifact{
+  position: fixed;
+  float: left;
+  margin-top: 45px;
+  margin-left: -8px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 120px 20px 120px;
+  background-color: rgba(100,100,100,0.5);
+}

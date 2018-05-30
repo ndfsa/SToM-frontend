@@ -1,0 +1,15 @@
+<div class="background"></div>
+<div class="toolbar">
+  <ul>
+    <li><a class="menu-item" routerLink="/home">Home Page</a></li>
+    <li><a class="menu-item" routerLink="/home" (click)="this.globals.signOutReset()">Sign out</a></li>
+  </ul>
+</div>
+
+<div class="artifact">
+  <h1>Input new data</h1>
+  <input type="text" [(ngModel)]="name" name="u" placeholder="Name" required="required"/>
+  <input type="text" [(ngModel)]="email" name="u" placeholder="E-mail" required="required"/>
+  <input type="password" [(ngModel)]="password" name="u" placeholder="Password" required="required"/>
+  <input type="button" value="Submit" class="btn btn-primary btn-block btn-large" (click)="modify()"/>
+</div>
