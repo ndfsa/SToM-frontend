@@ -140,7 +140,6 @@ input:focus {
   position: absolute;
   top: 0;
   left: 0;
-  margin: 3px;
 }
 .toolbar li{
   display: inline;

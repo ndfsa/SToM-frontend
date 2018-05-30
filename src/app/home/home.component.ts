@@ -17,4 +17,5 @@ export class HomeComponent implements OnInit {
   isLogged(): boolean {
     return (this.globals.global_id_cliente > 0);
   }
+
 }

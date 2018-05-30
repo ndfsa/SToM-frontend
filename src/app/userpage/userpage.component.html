@@ -5,11 +5,17 @@
     <li><a class="menu-item" routerLink="/home" (click)="this.globals.signOutReset()">Sign out</a></li>
   </ul>
 </div>
-<div class="container">
-  <div>
-    <h1>{{this.globals.global_nombre_cliente}}#{{this.globals.global_id_cliente}}</h1>
-  </div>
-  <div>
-    <h2>{{this.globals.global_correo_cliente}}</h2>
-  </div>
+<div class="artifact">
+  <ul>
+    <li><h1>{{this.globals.global_nombre_cliente}}#{{this.globals.global_id_cliente}}</h1></li>
+    <li><h2>{{this.globals.global_correo_cliente}}</h2></li>
+    <li>
+      <div style="margin-top: 3px;">
+        <ul>
+          <li><a (click)="hello()" routerLink="/userpage">Modificar cuenta</a></li>
+          <li><a>Elimiar cuenta</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
 </div>
