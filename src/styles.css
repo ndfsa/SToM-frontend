@@ -10,24 +10,6 @@ body{
   /*backface-visibility:visible;*/
 }
 
-body::before{
-  content: "";
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background:url(https://www.myplaystationwallpapers.net/1920x1080/nier-automata-concept-art.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-filter: blur(4px);
-  -moz-filter: blur(4px);
-  -o-filter: blur(4px);
-  -ms-filter: blur(4px);
-  filter: blur(4px);
-  transform: scale(1.055);
-}
-
 .btn {
   display: inline-block;
   *display: inline;
