@@ -12,10 +12,7 @@ export class SigninComponent implements OnInit {
 
   email: any;
   password: any;
-  res: any;
-  constructor(private service: ClienteService, private router:Router, private globals: Globals) {
-
-  }
+  constructor(private service: ClienteService, private router:Router, private globals: Globals) { }
 
   ngOnInit() {  }
   log(event){
@@ -25,8 +22,11 @@ export class SigninComponent implements OnInit {
       password: this.password
     };
     this.service.logCliente(cliente).subscribe((response:Response) => {
-      this.res = JSON.parse(response.text());
-      if (this.res.id_cliente != 0){
+      const res = JSON.parse(response.text());
+      if (res.id_cliente != 0){
+        this.globals.global_id_cliente = res.id_cliente;
+        this.globals.global_correo_cliente = res.correo;
+        this.globals.global_nombre_cliente = res.nombre;
         this.goToUserPage();
       }
     });

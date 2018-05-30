@@ -1,3 +1,15 @@
-<p>
-  userpage works!
-</p>
+<div class="background"></div>
+<div class="toolbar">
+  <ul>
+    <li><a class="menu-item" routerLink="/home">Home Page</a></li>
+    <li><a class="menu-item" routerLink="/home" (click)="this.globals.signOutReset()">Sign out</a></li>
+  </ul>
+</div>
+<div class="container">
+  <div>
+    <h1>{{this.globals.global_nombre_cliente}}#{{this.globals.global_id_cliente}}</h1>
+  </div>
+  <div>
+    <h2>{{this.globals.global_correo_cliente}}</h2>
+  </div>
+</div>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Globals} from "../globals";
+import {Component, OnInit} from '@angular/core';
+import {Globals} from '../globals';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +8,13 @@ import {Globals} from "../globals";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private globals: Globals) {
-
+  constructor(public globals: Globals) {
   }
 
   ngOnInit() {
   }
 
+  isLogged(): boolean {
+    return (this.globals.global_id_cliente > 0);
+  }
 }
