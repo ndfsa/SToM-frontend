@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {Response} from "@angular/http";
 import {ClienteService} from "../services/cliente.service";
-
+import { Globals } from '../globals';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -12,8 +12,10 @@ export class SigninComponent implements OnInit {
 
   email: any;
   password: any;
-  estados: any = [];
-  constructor(private service: ClienteService, private router:Router) { }
+  res: any;
+  constructor(private service: ClienteService, private router:Router, private globals: Globals) {
+
+  }
 
   ngOnInit() {  }
   log(event){
@@ -21,13 +23,15 @@ export class SigninComponent implements OnInit {
     const cliente = {
       correo: this.email,
       password: this.password
-    }
-    var res;
+    };
     this.service.logCliente(cliente).subscribe((response:Response) => {
-      res = JSON.parse(response.text());
-      console.log(res.nombre);
+      this.res = JSON.parse(response.text());
+      if (this.res.id_cliente != 0){
+        this.goToUserPage();
+      }
     });
-    console.log("response is : " + res);
   }
-
+  goToUserPage(){
+    return this.router.navigate(["/","userpage"])
+  }
 }
