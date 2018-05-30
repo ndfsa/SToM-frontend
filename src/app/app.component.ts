@@ -22,6 +22,4 @@ export class AppComponent {
   //   this.serviciod.logCliente(cliente);
   // }
 
-
-
 }
