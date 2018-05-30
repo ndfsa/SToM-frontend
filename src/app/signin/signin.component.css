@@ -1,0 +1,13 @@
+.background{
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background:url(https://images8.alphacoders.com/682/thumb-1920-682604.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(4px);
+  transform: scale(1.055);
+}

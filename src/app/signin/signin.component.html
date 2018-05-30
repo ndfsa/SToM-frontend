@@ -1,7 +1,17 @@
 
-<div class="login">
-  <h1>SToM :)</h1>
-  <input type="text" [(ngModel)]="email" name="u" placeholder="E-mail" required="required"/>
-  <input type="password" [(ngModel)]="password" name="u" placeholder="Password" required="required"/>
-  <input type="button" value="Login!" class="btn btn-primary btn-block btn-large" (click)="log($event)"/>
+<div class="background"></div>
+<div class="toolbar">
+  <ul>
+    <li><a class="menu-item" routerLink="/home">Home Page</a></li>
+    <li><a class="menu-item" routerLink="/signin">Sign in</a></li>
+    <li><a class="menu-item" routerLink="/signup">Sign up</a></li>
+  </ul>
+</div>
+<div class="container">
+  <div class="login">
+    <h1>SToM :)</h1>
+    <input type="text" [(ngModel)]="email" name="u" placeholder="E-mail" required="required"/>
+    <input type="password" [(ngModel)]="password" name="u" placeholder="Password" required="required"/>
+    <input type="button" value="Login!" class="btn btn-primary btn-block btn-large" (click)="log($event)"/>
+  </div>
 </div>
