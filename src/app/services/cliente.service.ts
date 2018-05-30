@@ -35,5 +35,18 @@ export class ClienteService {
     });
     return this.http.post(url, data, requestOptions).forEach(res => res.json());
   }
-  update
+  modifyCliente(cliente){
+    let url = 'http://localhost:8080/SToM/cliente/PUT/';
+    let data = JSON.stringify(cliente);
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    let requestOptions = new RequestOptions({
+      method: RequestMethod.Put,
+      url: url,
+      headers: headers,
+      body: data
+    });
+    return this.http.put(url, data, requestOptions);
+  }
 }
