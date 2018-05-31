@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import {Headers, Http, RequestMethod, RequestOptions, Response} from '@angular/http';
+import {Globals} from "../globals";
 
 @Injectable()
 export class ClienteService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private globals: Globals) { }
   logCliente(cliente) {
     let url = 'http://localhost:8080/SToM/cliente/login';
     let data = JSON.stringify(cliente);
@@ -33,10 +34,10 @@ export class ClienteService {
       headers: headers,
       body: data
     });
-    return this.http.post(url, data, requestOptions).forEach(res => res.json());
+    return this.http.post(url, data, requestOptions);
   }
   modifyCliente(cliente){
-    let url = 'http://localhost:8080/SToM/cliente/PUT/';
+    let url = 'http://localhost:8080/SToM/cliente/PUT/'+ this.globals.global_id_cliente;
     let data = JSON.stringify(cliente);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
