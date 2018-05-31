@@ -50,4 +50,8 @@ export class ClienteService {
     });
     return this.http.put(url, data, requestOptions);
   }
+  deleteCliente(){
+    let url = 'http://localhost:8080/SToM/cliente/borrar/'+ this.globals.global_id_cliente;
+    return this.http.delete(url);
+  }
 }

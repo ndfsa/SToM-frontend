@@ -1,0 +1,23 @@
+.background{
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background:url(http://i0.kym-cdn.com/photos/images/original/001/151/579/6e6.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(2px);
+  transform: scale(1.055);
+}
+.artifact{
+  position: fixed;
+  float: left;
+  margin-top: 45px;
+  margin-left: -8px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 120px 20px 120px;
+
+}

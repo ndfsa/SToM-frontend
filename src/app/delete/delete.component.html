@@ -1,0 +1,13 @@
+<div class="background"></div>
+<div class="toolbar">
+  <ul>
+    <li><a class="menu-item" routerLink="/home">Home Page</a></li>
+    <li><a class="menu-item" routerLink="/home" (click)="this.globals.signOutReset()">Sign out</a></li>
+  </ul>
+</div>
+
+<div class="artifact">
+  <h1>Are you sure you want to delete your account?</h1>
+  <input type="button" value="Yes I am sure" class="btn btn-block btn-large" (click)="delete()"/>
+  <input type="button" value="No, please help me" class="btn btn-primary btn-block btn-large" (click)="goHome()"/>
+</div>
