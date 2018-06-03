@@ -1,1 +1,17 @@
 <div class="background"></div>
+<div class="toolbar">
+  <ul>
+    <li><a class="menu-item" routerLink="/distribuidor">Atras</a></li>
+  </ul>
+</div>
+<div class="container">
+  <h2 class="title">Introducir el ID del distribuidor</h2>
+  <a routerLink="/adminJuegos" class="button">Juegos</a>
+  <div *ngIf="isLogged()">
+    <ul>
+      <li><a routerLink="/userpage">Profile</a></li>
+      <li><a>Wish list</a></li>
+      <li><a>Cart</a></li>
+    </ul>
+  </div>
+</div>
