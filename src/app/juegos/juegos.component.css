@@ -1,0 +1,13 @@
+.background{
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background:url(http://7wallpapers.net/wp-content/uploads/10_Dota2-Legion-Commander.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(3px);
+  transform: scale(1.055);
+}

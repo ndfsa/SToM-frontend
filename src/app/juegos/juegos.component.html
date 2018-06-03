@@ -1,5 +1,21 @@
-<p>
-  juegos works!
-</p>
 
+<div class="background"></div>
+<div class="toolbar">
+  <ul>
+    <li><a class="menu-item" routerLink="/home">Home Page</a></li>
+    <li><a class="menu-item" routerLink="/signin">Sign in</a></li>
+  </ul>
+</div>
+<div class="container">
+  <div class="AñadirJuegos">
+    <h1>Añadir Juegos</h1>
+    <input type="text" [(ngModel)]="ID_Distribuidor" name="u" placeholder="ID" required="required"/>
+    <input type="text" [(ngModel)]="name" name="u" placeholder="Name" required="required"/>
+    <input type="text" [(ngModel)]="estado" name="u" placeholder="Estado" required="required"/>
+    <input type="password" [(ngModel)]="categoria" name="u" placeholder="Categoria" required="required"/>
+    <input type="costo" [(ngModel)]="costo" name="u" placeholder="Costo" required="required"/>
+    <input type="version" [(ngModel)]="version" name="u" placeholder="Version" required="required"/>
+    <input type="button" value="Añadir juego!" class="btn btn-primary btn-block btn-large" (click)="register($event)"/>
+  </div>
+</div>
 
