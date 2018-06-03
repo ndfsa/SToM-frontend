@@ -1,0 +1,13 @@
+.background{
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background:url(https://i.pinimg.com/originals/63/69/4b/63694b0af7795eafbdca96ec54ec7233.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(4px);
+  transform: scale(1.055);
+}

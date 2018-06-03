@@ -42,6 +42,7 @@ import { EliminarDistribuidorComponent } from './eliminar-distribuidor/eliminar-
       { path: 'userpage/delete', component: DeleteComponent},
       { path: 'adminJuegos', component: JuegosComponent},
       { path: 'distribuidor', component: DistribuidorComponent},
+      { path: 'distribuidor/elminarDistribuidor', component: EliminarDistribuidorComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/home', pathMatch: 'full' }
     ])
