@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule} from '@angular/http';
 import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { ClienteService } from './services/cliente.service';
 import { SignupComponent } from './signup/signup.component';
@@ -12,6 +13,7 @@ import { UserpageComponent } from './userpage/userpage.component';
 import {Globals} from "./globals";
 import { ModifyComponent } from './modify/modify.component';
 import { DeleteComponent } from './delete/delete.component';
+import { JuegosComponent } from './juegos/juegos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { DeleteComponent } from './delete/delete.component';
     HomeComponent,
     UserpageComponent,
     ModifyComponent,
-    DeleteComponent
+    DeleteComponent,
+    JuegosComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { DeleteComponent } from './delete/delete.component';
       { path: 'userpage', component: UserpageComponent },
       { path: 'userpage/modify', component: ModifyComponent},
       { path: 'userpage/delete', component: DeleteComponent},
+      { path: 'adminJuegos', component: JuegosComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/home', pathMatch: 'full' }
     ])
