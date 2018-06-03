@@ -15,6 +15,7 @@ import { ModifyComponent } from './modify/modify.component';
 import { DeleteComponent } from './delete/delete.component';
 import { JuegosComponent } from './juegos/juegos.component';
 import { DistribuidorComponent } from './distribuidor/distribuidor.component';
+import { EliminarDistribuidorComponent } from './eliminar-distribuidor/eliminar-distribuidor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { DistribuidorComponent } from './distribuidor/distribuidor.component';
     ModifyComponent,
     DeleteComponent,
     JuegosComponent,
-    DistribuidorComponent
+    DistribuidorComponent,
+    EliminarDistribuidorComponent
   ],
   imports: [
     BrowserModule,
