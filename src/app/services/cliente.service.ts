@@ -7,7 +7,7 @@ export class ClienteService {
 
   constructor(private http: Http, private globals: Globals) { }
   logCliente(cliente) {
-    let url = 'http://localhost:8080/SToM/cliente/login';
+    let url = 'http://localhost:8083/SToM/cliente/login';
     let data = JSON.stringify(cliente);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -23,7 +23,7 @@ export class ClienteService {
 
   }
   registerCliente(cliente){
-    let url = 'http://localhost:8080/SToM/cliente/post';
+    let url = 'http://localhost:8083/SToM/cliente/post';
     let data = JSON.stringify(cliente);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
