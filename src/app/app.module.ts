@@ -14,6 +14,7 @@ import {Globals} from "./globals";
 import { ModifyComponent } from './modify/modify.component';
 import { DeleteComponent } from './delete/delete.component';
 import { JuegosComponent } from './juegos/juegos.component';
+import { DistribuidorComponent } from './distribuidor/distribuidor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { JuegosComponent } from './juegos/juegos.component';
     UserpageComponent,
     ModifyComponent,
     DeleteComponent,
-    JuegosComponent
+    JuegosComponent,
+    DistribuidorComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { JuegosComponent } from './juegos/juegos.component';
       { path: 'userpage/modify', component: ModifyComponent},
       { path: 'userpage/delete', component: DeleteComponent},
       { path: 'adminJuegos', component: JuegosComponent},
+      { path: 'distribuidor', component: DistribuidorComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/home', pathMatch: 'full' }
     ])
