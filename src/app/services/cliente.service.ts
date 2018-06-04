@@ -36,6 +36,7 @@ export class ClienteService {
     });
     return this.http.post(url, data, requestOptions);
   }
+
   modifyCliente(cliente){
     let url = 'http://localhost:8080/SToM/cliente/PUT/'+ this.globals.global_id_cliente;
     let data = JSON.stringify(cliente);

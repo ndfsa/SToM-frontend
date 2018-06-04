@@ -19,6 +19,7 @@ import { EliminarDistribuidorComponent } from './eliminar-distribuidor/eliminar-
 import { AddDistribuidorComponent } from './add-distribuidor/add-distribuidor.component';
 import {ListaJuegosComponent} from "./lista-juegos/lista-juegos.component";
 import {DistribuidorService} from './distribuidor.service';
+import {JuegosService} from './services/juegos.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,7 @@ import {DistribuidorService} from './distribuidor.service';
       { path: '**', redirectTo: '/home', pathMatch: 'full' }
     ])
   ],
-  providers: [ClienteService, Globals, DistribuidorService],
+  providers: [ClienteService,JuegosService, Globals, DistribuidorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
