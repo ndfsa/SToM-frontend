@@ -1,0 +1,17 @@
+<div class="background"></div>
+<div class="toolbar">
+  <ul>
+    <li><a class="menu-item" routerLink="/distribuidor">Atras</a></li>
+  </ul>
+</div>
+<div class="container">
+  <h2 class="title">Editar distribuidor</h2>
+  <div>
+    <input type="text" [(ngModel)]="id" name="u" placeholder="ID" required="required"/>
+    <input type="text" [(ngModel)]="correo" name="u" placeholder="CORREO" required="required"/>
+    <input type="text" [(ngModel)]="telefono" name="u" placeholder="TELEFONO" required="required"/>
+    <input type="text" [(ngModel)]="direccion" name="u" placeholder="DIRECCION" required="required"/>
+    <input type="text" [(ngModel)]="nombre" name="u" placeholder="NOMBRE" required="required"/>
+    <input type="button" value="Confirmar" class="btn btn-primary btn-block btn-large" (click)="editar()"/>
+  </div>
+</div>
