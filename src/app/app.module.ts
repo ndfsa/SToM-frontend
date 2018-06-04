@@ -49,6 +49,7 @@ import {ListaJuegosComponent} from "./lista-juegos/lista-juegos.component";
       { path: 'listaJuegos', component: ListaJuegosComponent},
       { path: 'distribuidor', component: DistribuidorComponent},
       { path: 'distribuidor/elminarDistribuidor', component: EliminarDistribuidorComponent},
+      { path: 'distribuidor/addDistribuidor', component: AddDistribuidorComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/home', pathMatch: 'full' }
     ])
