@@ -29,6 +29,8 @@ import { AddDistribuidorComponent } from './add-distribuidor/add-distribuidor.co
     JuegosComponent,
     DistribuidorComponent,
     EliminarDistribuidorComponent,
+    ListaJuegosComponent,
+    EliminarDistribuidorComponent,
     AddDistribuidorComponent
   ],
   imports: [
@@ -44,7 +46,6 @@ import { AddDistribuidorComponent } from './add-distribuidor/add-distribuidor.co
       { path: 'userpage/delete', component: DeleteComponent},
       { path: 'adminJuegos', component: JuegosComponent},
       { path: 'distribuidor', component: DistribuidorComponent},
-      { path: 'distribuidor/addDistribuidor', component: AddDistribuidorComponent},
       { path: 'distribuidor/elminarDistribuidor', component: EliminarDistribuidorComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/home', pathMatch: 'full' }
