@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {Response} from "@angular/http";
+import {ClienteService} from "../services/cliente.service";
+import { Globals } from '../globals';
+import {SigninComponent} from '../signin/signin.component';
+import {DistribuidorService} from '../distribuidor.service';
 
 @Component({
   selector: 'app-eliminar-distribuidor',
@@ -7,9 +13,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EliminarDistribuidorComponent implements OnInit {
 
-  constructor() { }
+  id:any;
+  constructor(private service: DistribuidorService, private router:Router, private globals: Globals) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
+  deleteDistribuidor(){
+      this.service.deleteDistribuidor().subscribe((response:Response) => {
+        if (response.text() != "0"){
+          this.globals.signOutReset();
+          this.goDistribuidor();
+        }
+      });
+    }
+    goDistribuidor(){
+      return this.router.navigate(["/","distribuidor"])
+    }
 }
