@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {ClienteService} from "../services/cliente.service";
+import {DistribuidorService} from "../distribuidor.service";
+import {Response} from "@angular/http";
 
 
 @Component({
@@ -14,7 +15,7 @@ export class AddDistribuidorComponent implements OnInit {
   telefono: any;
   email: any;
   direccion: any;
-  constructor(private serviciod: ClienteService, private router: Router) { }
+  constructor(private distrib: DistribuidorService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -26,6 +27,8 @@ export class AddDistribuidorComponent implements OnInit {
       direccion: this.direccion,
       telefono: this.telefono
     }
-    this.serviciod.registerCliente(distribuidor);
+    this.distrib.addDistribuidor(distribuidor).subscribe((response:Response) => {
+      console.log(response.text());
+    });
   }
 }
