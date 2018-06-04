@@ -46,6 +46,7 @@ import {ListaJuegosComponent} from "./lista-juegos/lista-juegos.component";
       { path: 'userpage/modify', component: ModifyComponent},
       { path: 'userpage/delete', component: DeleteComponent},
       { path: 'adminJuegos', component: JuegosComponent},
+      { path: 'listaJuegos', component: ListaJuegosComponent},
       { path: 'distribuidor', component: DistribuidorComponent},
       { path: 'distribuidor/elminarDistribuidor', component: EliminarDistribuidorComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
