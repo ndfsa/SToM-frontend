@@ -25,7 +25,7 @@ export class JuegosComponent implements OnInit {
   register(event){
     event.preventDefault();
     var juego = {
-      idD: this.ID_Distribuidor,
+      id_distribuidor: this.ID_Distribuidor,
       nombre: this.name,
       estado: this.estado,
       categoria: this.categoria,
@@ -36,7 +36,7 @@ export class JuegosComponent implements OnInit {
       console.log(response);
       const res = JSON.parse(response.text());
 
-        this.goToGamesPage();
+      this.goToGamesPage();
 
     });
   }
