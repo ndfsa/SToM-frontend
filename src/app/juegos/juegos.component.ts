@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./juegos.component.css']
 })
 export class JuegosComponent implements OnInit {
+  ID_Distribuidor:any;
+  name:any;
+  estado:any;
+  costo:any;
+  version:any;
+  categoria:any;
 
   constructor() { }
 
