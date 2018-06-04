@@ -11,18 +11,33 @@ export class DistribuidorService {
 
   deleteDistribuidor(id){
     console.log("hola");
-    let url = 'http://localhost:8080/SToM/distribuidor/borrar/' + id;
+    let url = 'http://localhost:8081/SToM/distribuidor/borrar/' + id;
     return this.http.delete(url);
   }
 
   addDistribuidor(distrib){
-    let url = 'http://localhost:8080/SToM/distribuidor/post';
+    let url = 'http://localhost:8081/SToM/distribuidor/post';
     let data = JSON.stringify(distrib);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
     let requestOptions = new RequestOptions({
       method: RequestMethod.Post,
+      url: url,
+      headers: headers,
+      body: data
+    });
+    return this.http.post(url, data, requestOptions);
+  }
+
+  editarDistribuidor(distrib,id){
+    let url = 'http://localhost:8081/SToM/distribuidor/PUT/'+id;
+    let data = JSON.stringify(distrib);
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    let requestOptions = new RequestOptions({
+      method: RequestMethod.Put,
       url: url,
       headers: headers,
       body: data

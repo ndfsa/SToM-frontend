@@ -7,7 +7,7 @@ export class ClienteService {
 
   constructor(private http: Http, private globals: Globals) { }
   logCliente(cliente) {
-    let url = 'http://localhost:8083/SToM/cliente/login';
+    let url = 'http://localhost:8081/SToM/cliente/login';
     let data = JSON.stringify(cliente);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -23,7 +23,7 @@ export class ClienteService {
 
   }
   registerCliente(cliente){
-    let url = 'http://localhost:8083/SToM/cliente/post';
+    let url = 'http://localhost:8081/SToM/cliente/post';
     let data = JSON.stringify(cliente);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -38,7 +38,7 @@ export class ClienteService {
   }
 
   modifyCliente(cliente){
-    let url = 'http://localhost:8080/SToM/cliente/PUT/'+ this.globals.global_id_cliente;
+    let url = 'http://localhost:8081/SToM/cliente/PUT/'+ this.globals.global_id_cliente;
     let data = JSON.stringify(cliente);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -52,7 +52,7 @@ export class ClienteService {
     return this.http.put(url, data, requestOptions);
   }
   deleteCliente(){
-    let url = 'http://localhost:8080/SToM/cliente/borrar/'+ this.globals.global_id_cliente;
+    let url = 'http://localhost:8081/SToM/cliente/borrar/'+ this.globals.global_id_cliente;
     return this.http.delete(url);
   }
 }
