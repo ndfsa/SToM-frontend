@@ -17,6 +17,7 @@ import { JuegosComponent } from './juegos/juegos.component';
 import { DistribuidorComponent } from './distribuidor/distribuidor.component';
 import { EliminarDistribuidorComponent } from './eliminar-distribuidor/eliminar-distribuidor.component';
 import { AddDistribuidorComponent } from './add-distribuidor/add-distribuidor.component';
+import {ListaJuegosComponent} from "./lista-juegos/lista-juegos.component";
 @NgModule({
   declarations: [
     AppComponent,
