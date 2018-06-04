@@ -19,7 +19,8 @@ export class EliminarDistribuidorComponent implements OnInit {
   ngOnInit() {  }
 
   deleteDistribuidor(){
-      this.service.deleteDistribuidor().subscribe((response:Response) => {
+      this.service.deleteDistribuidor(this.id).subscribe((response:Response) => {
+        console.log(response.text());
         if (response.text() != "0"){
           this.globals.signOutReset();
           this.goDistribuidor();

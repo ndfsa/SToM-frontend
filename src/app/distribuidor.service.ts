@@ -9,7 +9,9 @@ export class DistribuidorService {
 
 
 
-  deleteDistribuidor(){
-    console.log("hol")
+  deleteDistribuidor(id){
+    console.log("hola")
+    let url = 'http://localhost:8080/SToM/distribuidor/borrar/'+ id;
+    return this.http.delete(url);
   }
 }
