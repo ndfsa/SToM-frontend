@@ -16,6 +16,7 @@ import { DeleteComponent } from './delete/delete.component';
 import { JuegosComponent } from './juegos/juegos.component';
 import { DistribuidorComponent } from './distribuidor/distribuidor.component';
 import { EliminarDistribuidorComponent } from './eliminar-distribuidor/eliminar-distribuidor.component';
+import { AddDistribuidorComponent } from './add-distribuidor/add-distribuidor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { EliminarDistribuidorComponent } from './eliminar-distribuidor/eliminar-
     DeleteComponent,
     JuegosComponent,
     DistribuidorComponent,
-    EliminarDistribuidorComponent
+    EliminarDistribuidorComponent,
+    AddDistribuidorComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { EliminarDistribuidorComponent } from './eliminar-distribuidor/eliminar-
       { path: 'userpage/delete', component: DeleteComponent},
       { path: 'adminJuegos', component: JuegosComponent},
       { path: 'distribuidor', component: DistribuidorComponent},
+      { path: 'distribuidor/addDistribuidor', component: AddDistribuidorComponent},
       { path: 'distribuidor/elminarDistribuidor', component: EliminarDistribuidorComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/home', pathMatch: 'full' }

@@ -1,0 +1,16 @@
+<div class="background"></div>
+<div class="toolbar">
+  <ul>
+    <li><a class="menu-item" routerLink="/distribuidor">Atras</a></li>
+  </ul>
+</div>
+<div class="container">
+  <div class="login">
+    <h1>Agregar nuevo distribuidor</h1>
+    <input type="text" [(ngModel)]="nombre" name="u" placeholder="nombre" required="required"/>
+    <input type="text" [(ngModel)]="email" name="u" placeholder="E-mail" required="required"/>
+    <input type="text" [(ngModel)]="telefono" name="u" placeholder="telefono" required="required"/>
+    <input type="text" [(ngModel)]="direccion" name="u" placeholder="direccion" required="required"/>
+    <input type="button" value="Create!" class="btn btn-primary btn-block btn-large" (click)="registerDistrib($event)"/>
+  </div>
+</div>
