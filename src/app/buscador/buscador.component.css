@@ -1,0 +1,26 @@
+.background{
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background:url(https://images5.alphacoders.com/438/thumb-1920-438934.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(2px);
+  transform: scale(1.055);
+}
+.artifact{
+  position: fixed;
+  float: left;
+  margin-top: 45px;
+  margin-left: -8px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 120px 20px 120px;
+
+}
+#game-list{
+  margin-top: 20%;
+}

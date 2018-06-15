@@ -1,0 +1,24 @@
+<div class="background"></div>
+<div class="toolbar">
+  <ul>
+    <li><a class="menu-item" routerLink="/home">Home Page</a></li>
+    <li><a class="menu-item" routerLink="/signin">Sign in</a></li>
+  </ul>
+</div>
+<div *ngIf="!flag" class="container">
+  <div class="login">
+    <h1>Enter a game</h1>
+    <input type="text" [(ngModel)]="str" name="u" placeholder="Looking for..." required="required"/>
+    <input type="button" value="Search" class="btn btn-primary btn-block btn-large" (click)="get($event)"/>
+  </div>
+</div>
+<div *ngIf="flag" class="container">
+  <div class="login" style="top: 20%;">
+    <h1>Enter a game</h1>
+    <input type="text" [(ngModel)]="str" name="u" placeholder="Looking for..." required="required"/>
+    <input type="button" value="Search" class="btn btn-primary btn-block btn-large" (click)="get($event)"/>
+  </div>
+  <ul id="game-list">
+    <li *ngFor="let game of list">{{game.nombre}}: {{game.descripcion}}    ${{game.costo}}</li>
+  </ul>
+</div>

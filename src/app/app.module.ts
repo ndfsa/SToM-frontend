@@ -21,6 +21,7 @@ import {ListaJuegosComponent} from "./lista-juegos/lista-juegos.component";
 import {DistribuidorService} from './distribuidor.service';
 import {JuegosService} from './services/juegos.service';
 import { DistribuidorModificarComponent } from './distribuidor-modificar/distribuidor-modificar.component';
+import { BuscadorComponent } from './buscador/buscador.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { DistribuidorModificarComponent } from './distribuidor-modificar/distrib
     ListaJuegosComponent,
     EliminarDistribuidorComponent,
     AddDistribuidorComponent,
-    DistribuidorModificarComponent
+    DistribuidorModificarComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,7 @@ import { DistribuidorModificarComponent } from './distribuidor-modificar/distrib
       { path: 'distribuidor/elminarDistribuidor', component: EliminarDistribuidorComponent},
       { path: 'distribuidor/addDistribuidor', component: AddDistribuidorComponent},
       { path: 'distribuidor/editarDistribuidor', component: DistribuidorModificarComponent},
+      { path: 'buscar', component: BuscadorComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/home', pathMatch: 'full' }
     ])
