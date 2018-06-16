@@ -17,6 +17,8 @@ export class JuegosComponent implements OnInit {
   costo:any;
   version:any;
   categoria:any;
+  descripcion : any;
+  linkimagen : any;
 
   constructor(private serviciod: JuegosService,private globals: Globals, private router: Router) { }
 
@@ -30,7 +32,9 @@ export class JuegosComponent implements OnInit {
       estado: this.estado,
       categoria: this.categoria,
       costo:this.costo,
-      version:this.version
+      version:this.version,
+      descripcion:this.descripcion,
+      linkimagen:this.linkimagen
     }
     this.serviciod.registerGame(juego).subscribe((response:Response) => {
       console.log(response);
