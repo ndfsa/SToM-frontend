@@ -99,14 +99,14 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -220px 0 0 -150px;
+  margin: -250px 0 0 -150px;
   width: 300px;
   height: 300px;
 }
 .AñadirJuegos h1{
   color: #fff;
   text-shadow: 0 0 10px rgba(255, 15, 100, 0.5);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-align: center;
 }
 
@@ -185,4 +185,15 @@ input:focus {
 .menu-item{
   font-size: large;
   color: #e6e6e6;
+}
+.menu-item2{
+  font-size: medium;
+  color: #e6e6e6;
+}
+.toolbar2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-color: #333;
 }
