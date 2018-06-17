@@ -18,7 +18,10 @@
     <input type="text" [(ngModel)]="str" name="u" placeholder="Looking for..." required="required"/>
     <input type="button" value="Search" class="btn btn-primary btn-block btn-large" (click)="get($event)"/>
   </div>
+
   <ul id="game-list">
-    <li *ngFor="let game of list">{{game.nombre}}: {{game.descripcion}}    ${{game.costo}}</li>
+    <li *ngFor="let game of list">
+      <a class="button" href="/listaJuegos" routerLink="/listaJuegos" (click)="saveID_juego(game.id_juego)"  >{{game.nombre}}: </a> {{game.id_juego}} {{game.descripcion}}    ${{game.costo}}
+    </li>
   </ul>
 </div>

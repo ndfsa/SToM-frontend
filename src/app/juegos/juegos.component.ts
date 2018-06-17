@@ -11,6 +11,7 @@ import {JuegosService} from '../services/juegos.service';
   styleUrls: ['./juegos.component.css']
 })
 export class JuegosComponent implements OnInit {
+  id_juego:any;
   ID_Distribuidor:any;
   name:any;
   estado:any;
@@ -27,6 +28,7 @@ export class JuegosComponent implements OnInit {
   register(event){
     event.preventDefault();
     var juego = {
+      id_juego: this.id_juego,
       id_distribuidor: this.ID_Distribuidor,
       nombre: this.name,
       estado: this.estado,
@@ -45,7 +47,7 @@ export class JuegosComponent implements OnInit {
     });
   }
   goToGamesPage(){
-    return this.router.navigate(["/","listaJuegos"])
+    return this.router.navigate(["/","home"])
   }
 
 }

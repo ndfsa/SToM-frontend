@@ -33,4 +33,16 @@ export class JuegosService{
     });
     return this.http.get(url, requestOptions);
   }
+  getJuego(){
+    let url = 'http://localhost:8083/SToM/juegos/getjuego/' + this.globals.global_id_juego;
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    let requestOptions = new RequestOptions({
+      method: RequestMethod.Get,
+      url: url,
+      headers: headers
+    });
+    return this.http.get(url, requestOptions);
+  }
 }
