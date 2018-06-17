@@ -15,7 +15,7 @@ export class ListaJuegosComponent implements OnInit {
   str = "";
   flag = false;
   descripcion:any;
-  link:any;
+  link:string;
   nombre:any;
   constructor(private service: JuegosService, private router: Router,private globals: Globals) { }
 
@@ -34,24 +34,22 @@ export class ListaJuegosComponent implements OnInit {
     return this.globals.global_id_juego;
   }
   getDescripcion(){
-    this.getID_Juego(this.globals.global_id_juego);
+
     return this.descripcion;
   }
   getLink(){
-    this.getID_Juego(this.globals.global_id_juego);
+    console.log(this.link);
     return this.link;
   }
   getName(){
-    this.getID_Juego(this.globals.global_id_juego);
+
     return this.nombre;
   }
   getID_Juego(ID){
-    event.preventDefault();
-
     this.service.getJuego().subscribe((response:Response) => {
       const res = JSON.parse(response.text());
       this.descripcion=res.descripcion;
-      this.link=res.link;
+      this.link=res.linkImagen;
       this.nombre=res.nombre;
     });
   }
