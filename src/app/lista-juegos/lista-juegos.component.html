@@ -9,15 +9,12 @@
   </head>
   <body>
 <br><br>
-  <h2 style="text-align:center">Overwatch</h2>
+  <h2 style="text-align:center">{{getName()}}</h2>
 
   <div class="card">
-    <img src="https://blznav.akamaized.net/img/games/cards/card-overwatch-7eff92e1257149aa.jpg" alt="Img1" style="width:100%">
+    <img src={{getLink()}} alt="Img1" style="width:100%">
     <h1>Description</h1>
-    <p class="description">In a time of global crisis, an international task force of heroes banded
-      together to restore peace to a war-torn world: OVERWATCH. It ended the crisis and helped
-      to maintain peace in the decades that followed, inspiring an era of exploration, innovation,
-      and discovery. But after many years, Overwatch's influence waned, and it was eventually disbanded.</p>
+    <p class="description">{{getDescripcion()}}</p>
 
     <!--<div style="margin: 24px 0;">-->
       <!--<a href="#"><i class="fa fa-dribbble"></i></a>-->
@@ -26,6 +23,9 @@
       <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
     <!--</div>-->
     <p><button>Buy</button></p>
+    <li >
+      {{show()}}
+    </li>
   </div>
 
   </body>

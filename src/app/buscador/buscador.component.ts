@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {JuegosService} from "../services/juegos.service";
 import {Response} from "@angular/http";
 import {Router} from "@angular/router";
-
+import { Globals } from '../globals';
 @Component({
   selector: 'app-buscador',
   templateUrl: './buscador.component.html',
@@ -12,7 +12,8 @@ export class BuscadorComponent implements OnInit {
 list = [];
 str = "";
 flag = false;
-  constructor(private service: JuegosService, private router: Router) { }
+
+  constructor(private service: JuegosService, private router: Router,private  globals: Globals) { }
 
   ngOnInit() {
 
@@ -26,4 +27,11 @@ flag = false;
     });
   }
 
+  saveID_juego(ID){
+    this.globals.global_id_juego = ID;
+    this.goToGamePage();
+  }
+  goToGamePage(){
+    return this.router.navigate(["/","listaJuegos"])
+  }
 }
