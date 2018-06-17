@@ -6,14 +6,14 @@
     <li *ngIf="!isLogged()"><a class="menu-item" routerLink="/signin">Sign in</a></li>
     <li *ngIf="!isLogged()"><a class="menu-item" routerLink="/signup">Sign up</a></li>
     <li *ngIf="isLogged()"><a class="menu-item" routerLink="/home" (click)="this.globals.signOutReset()">Sign out</a></li>
+    <li><a class="menu-item" routerLink="/buscar">Search</a></li>
   </ul>
 </div>
 <div class="container">
   <h2 class="title">Home Page</h2>
   <a routerLink="/distribuidor" class="button">Distribuidores</a> <br>
   <a routerLink="/adminJuegos" class="button">Añadir Juego</a><br>
-  <a routerLink="/buscar" class="button">Busqueda</a> <br>
-  <br><a routerLink="/listaJuegos" class="button">Lista de Juegos</a>
+  <a routerLink="/listaJuegos" class="button">Lista de Juegos</a>
   <div *ngIf="isLogged()">
     <ul>
       <li><a routerLink="/userpage">Profile</a></li>
