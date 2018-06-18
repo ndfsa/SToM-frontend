@@ -4,6 +4,7 @@ import {Response} from "@angular/http";
 import {Router} from "@angular/router";
 //import Global = NodeJS.Global;
 import { Globals } from '../globals';
+import {ClienteService} from "../services/cliente.service";
 
 @Component({
   selector: 'app-lista-juegos',
@@ -17,31 +18,10 @@ export class ListaJuegosComponent implements OnInit {
   descripcion:any;
   link:string;
   nombre:any;
-  constructor(private service: JuegosService, private router: Router,private globals: Globals) { }
+  constructor(private cservice: ClienteService,private service: JuegosService, private router: Router,public globals: Globals) { }
 
   ngOnInit() {
     this.getID_Juego(this.globals.global_id_juego);
-  }
-  get(){
-    this.service.buscarJuego(this.str).subscribe((response:Response) => {
-      this.list = response.json();
-      // console.log(this.list[0].costo);
-    });
-  }
-  show(){
-    return this.globals.global_id_juego;
-  }
-  getDescripcion(){
-
-    return this.descripcion;
-  }
-  getLink(){
-    console.log(this.link);
-    return this.link;
-  }
-  getName(){
-
-    return this.nombre;
   }
   getID_Juego(ID){
     this.service.getJuego().subscribe((response:Response) => {
@@ -49,6 +29,15 @@ export class ListaJuegosComponent implements OnInit {
       this.descripcion=res.descripcion;
       this.link=res.linkImagen;
       this.nombre=res.nombre;
+    });
+  }
+  devolver(id){
+    this.service.devolverJuego(id).subscribe((response:Response) => {
+      this.cservice.getTodosJuegos(this.globals.global_id_cliente).subscribe((response:Response) => {
+        this.globals.global_juegos = response.json();
+        console.log(this.globals.global_juegos);
+      });
+      this.router.navigate(["/","listaJuegos"])
     });
   }
 }
