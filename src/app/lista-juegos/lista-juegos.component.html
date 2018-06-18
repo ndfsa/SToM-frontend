@@ -7,15 +7,15 @@
 <br><br><br><br><br><br><br><br>
 <div>
   <ul style="position: absolute">
-    <li>
-      <h2 style="text-align:center">{{getName()}}</h2>
+    <li *ngFor="let game of this.globals.global_juegos">
+      <h2 style="text-align:center">{{game.nombre}}</h2>
       <div class="card">
-        <img [src]=this.link alt="Img1" style="width:100%; height: 100%;"/>
+        <img [src]=game.linkImagen alt="Img1" style="width:100%; height: 100%;"/>
         <h1>Description</h1>
-        <p class="description">{{getDescripcion()}}</p>
-        <p><button>Buy</button></p>
+        <p class="description">{{game.descripcion}}</p>
+        <p><button (click)="devolver(game.id_juego)">Devolver</button></p>
       </div>
     </li>
   </ul>
-  
+
 </div>

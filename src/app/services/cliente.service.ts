@@ -55,4 +55,16 @@ export class ClienteService {
     let url = 'http://localhost:8080/SToM/cliente/borrar/'+ this.globals.global_id_cliente;
     return this.http.delete(url);
   }
+  getTodosJuegos(id){
+    let url = 'http://localhost:8080/SToM/juegos/getMisJuegos/' + id;
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    let requestOptions = new RequestOptions({
+      method: RequestMethod.Get,
+      url: url,
+      headers: headers
+    });
+    return this.http.get(url, requestOptions);
+  }
 }

@@ -45,4 +45,8 @@ export class JuegosService{
     });
     return this.http.get(url, requestOptions);
   }
+  devolverJuego(id){
+    let url = 'http://localhost:8080/SToM/juegos/delete/devolucion/'+ this.globals.global_id_cliente + '/' + id;
+    return this.http.delete(url);
+  }
 }
