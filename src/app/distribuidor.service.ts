@@ -11,12 +11,12 @@ export class DistribuidorService {
 
   deleteDistribuidor(id){
     console.log("hola");
-    let url = 'http://localhost:8083/SToM/distribuidor/borrar/' + id;
+    let url = 'http://localhost:8080/SToM/distribuidor/borrar/' + id;
     return this.http.delete(url);
   }
 
   addDistribuidor(distrib){
-    let url = 'http://localhost:8083/SToM/distribuidor/post';
+    let url = 'http://localhost:8080/SToM/distribuidor/post';
     let data = JSON.stringify(distrib);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -31,7 +31,7 @@ export class DistribuidorService {
   }
 
   editarDistribuidor(distrib,id){
-    let url = 'http://localhost:8083/SToM/distribuidor/PUT/'+id;
+    let url = 'http://localhost:8080/SToM/distribuidor/PUT/'+id;
     let data = JSON.stringify(distrib);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
