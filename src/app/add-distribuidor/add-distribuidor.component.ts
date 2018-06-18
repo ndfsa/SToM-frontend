@@ -29,6 +29,14 @@ export class AddDistribuidorComponent implements OnInit {
     }
     this.distrib.addDistribuidor(distribuidor).subscribe((response:Response) => {
       console.log(response.text());
+      if (response.toString()!="0"){
+          this.goDistribuidor();
+      }
     });
   }
+
+  goDistribuidor(){
+    return this.router.navigate(["/","distribuidor"])
+  }
+
 }
