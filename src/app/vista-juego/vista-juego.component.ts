@@ -3,6 +3,7 @@ import {Globals} from "../globals";
 import {Response} from "@angular/http";
 import {JuegosService} from "../services/juegos.service";
 import {Router} from "@angular/router";
+import {forEach} from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-vista-juego',
@@ -37,7 +38,7 @@ export class VistaJuegoComponent implements OnInit {
     return this.descripcion;
   }
   getLink(){
-    console.log(this.link);
+   // console.log(this.link);
     return this.link;
   }
   getName(){
@@ -52,4 +53,5 @@ export class VistaJuegoComponent implements OnInit {
       this.nombre=res.nombre;
     });
   }
+
 }
