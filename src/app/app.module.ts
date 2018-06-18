@@ -22,6 +22,7 @@ import {DistribuidorService} from './distribuidor.service';
 import {JuegosService} from './services/juegos.service';
 import { DistribuidorModificarComponent } from './distribuidor-modificar/distribuidor-modificar.component';
 import { BuscadorComponent } from './buscador/buscador.component';
+import { VistaJuegoComponent } from './vista-juego/vista-juego.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { BuscadorComponent } from './buscador/buscador.component';
     EliminarDistribuidorComponent,
     AddDistribuidorComponent,
     DistribuidorModificarComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    VistaJuegoComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,7 @@ import { BuscadorComponent } from './buscador/buscador.component';
       { path: 'distribuidor/addDistribuidor', component: AddDistribuidorComponent},
       { path: 'distribuidor/editarDistribuidor', component: DistribuidorModificarComponent},
       { path: 'buscar', component: BuscadorComponent},
+      { path: 'vistaJuegos', component: VistaJuegoComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/home', pathMatch: 'full' }
     ])

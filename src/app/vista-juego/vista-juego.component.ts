@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {JuegosService} from "../services/juegos.service";
+import {Globals} from "../globals";
 import {Response} from "@angular/http";
+import {JuegosService} from "../services/juegos.service";
 import {Router} from "@angular/router";
-//import Global = NodeJS.Global;
-import { Globals } from '../globals';
 
 @Component({
-  selector: 'app-lista-juegos',
-  templateUrl: './lista-juegos.component.html',
-  styleUrls: ['./lista-juegos.component.css']
+  selector: 'app-vista-juego',
+  templateUrl: './vista-juego.component.html',
+  styleUrls: ['./vista-juego.component.css']
 })
-export class ListaJuegosComponent implements OnInit {
+export class VistaJuegoComponent implements OnInit {
   list = [];
   str = "";
   flag = false;
@@ -26,6 +25,8 @@ export class ListaJuegosComponent implements OnInit {
     this.service.buscarJuego(this.str).subscribe((response:Response) => {
       this.list = response.json();
       // console.log(this.list[0].costo);
+
+
     });
   }
   show(){
