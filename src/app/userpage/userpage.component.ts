@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Globals} from '../globals';
+import {ClienteService} from "../services/cliente.service";
+import {Response} from "@angular/http";
 
 @Component({
   selector: 'app-userpage',
@@ -8,11 +10,12 @@ import {Globals} from '../globals';
 })
 export class UserpageComponent implements OnInit {
 
-  constructor(public globals: Globals) { }
+  constructor(public globals: Globals, private service: ClienteService) { }
 
   ngOnInit() {
-  }
-  hello(){
-    console.log("yeeeeiiiiiii");
+    this.service.getTodosJuegos(this.globals.global_id_cliente).subscribe((response:Response) => {
+      this.globals.global_juegos = response.json();
+      console.log(this.globals.global_juegos);
+    });
   }
 }
