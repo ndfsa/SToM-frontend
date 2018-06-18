@@ -4,6 +4,7 @@ import {Response} from "@angular/http";
 import {JuegosService} from "../services/juegos.service";
 import {Router} from "@angular/router";
 import {forEach} from '@angular/router/src/utils/collection';
+import {ClienteService} from "../services/cliente.service";
 
 @Component({
   selector: 'app-vista-juego',
@@ -17,7 +18,7 @@ export class VistaJuegoComponent implements OnInit {
   descripcion:any;
   link:string;
   nombre:any;
-  constructor(private service: JuegosService, private router: Router,private globals: Globals) { }
+  constructor(private cservice: ClienteService,private service: JuegosService, private router: Router,private globals: Globals) { }
 
   ngOnInit() {
     this.getID_Juego(this.globals.global_id_juego);
@@ -51,6 +52,15 @@ export class VistaJuegoComponent implements OnInit {
       this.descripcion=res.descripcion;
       this.link=res.linkImagen;
       this.nombre=res.nombre;
+    });
+  }
+  comprarJuego(){
+    this.service.comprarJuego().subscribe((response:Response) => {
+      this.cservice.getTodosJuegos(this.globals.global_id_cliente).subscribe((response:Response) => {
+        this.globals.global_juegos = response.json();
+        console.log(this.globals.global_juegos);
+      });
+      this.router.navigate(["/","listaJuegos"])
     });
   }
 
