@@ -29,9 +29,5 @@ flag = false;
 
   saveID_juego(ID){
     this.globals.global_id_juego = ID;
-    this.goToGamePage();
-  }
-  goToGamePage(){
-    return this.router.navigate(["/","listaJuegos"])
   }
 }

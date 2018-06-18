@@ -21,7 +21,12 @@
 
   <ul id="game-list">
     <li *ngFor="let game of list">
-      <a class="button" href="/listaJuegos" routerLink="/listaJuegos" (click)="saveID_juego(game.id_juego)"  >{{game.nombre}}: </a> {{game.id_juego}} {{game.descripcion}}    ${{game.costo}}
+      <img routerLink="/vistaJuegos" (click)="saveID_juego(game.id_juego)" [src]=game.linkImagen style="width: 200px; height: 200px; position: absolute"/>
+      <h3 routerLink="/vistaJuegos" (click)="saveID_juego(game.id_juego)" style="position: absolute; margin-left: 250px; ">{{game.nombre}}</h3>
+      <h2 style="position: absolute; margin-left: 500px">{{game.costo}}$</h2>
+      <p style="position: absolute; margin-left: 255px; margin-top: 50px;">{{game.descripcion}}</p>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <!--<a class="button" href="/listaJuegos" routerLink="/listaJuegos" (click)="saveID_juego(game.id_juego)"  >{{game.nombre}}: </a> {{game.id_juego}} {{game.descripcion}}    ${{game.costo}}-->
     </li>
   </ul>
 </div>
